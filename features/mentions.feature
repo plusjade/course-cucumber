@@ -6,3 +6,7 @@ Feature: User mentions
   Scenario: Comment has single @mention
     Given I write a comment with body "Hello @jade"
     Then the comment's mentions should include the user "jade"
+
+  Scenario: Comment has multiple @mentions
+    Given I write a comment with body "Hello @jade and @sam, how is it going?"
+    Then the comment's mentions should include the users "jade" and "sam"
