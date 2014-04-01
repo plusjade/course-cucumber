@@ -9,5 +9,6 @@ class Comment
     @body
       .split(/\s+/)
       .keep_if{ |word| word[0] == "@" }
+      .map{ |word| word[1, word.length] }
   end
 end
