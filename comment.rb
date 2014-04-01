@@ -6,5 +6,8 @@ class Comment
   end
 
   def mentions
+    @body
+      .split(/\s+/)
+      .keep_if{ |word| word[0] == "@" }
   end
 end
