@@ -3,6 +3,6 @@ Given(/^I write a comment with body "(.*?)"$/) do |body|
   puts @comment.body
 end
 
-Then(/^the comment's mentions should include the user "(.*?)"$/) do |arg1|
-  puts @comment.mentions
+Then(/^the comment's mentions should include the user "(.*?)"$/) do |name|
+  expect(@comment.mentions).to include(name)
 end
