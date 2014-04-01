@@ -4,4 +4,7 @@ class Comment
   def initialize(body)
     @body = body
   end
+
+  def mentions
+  end
 end
