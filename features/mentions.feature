@@ -9,4 +9,4 @@ Feature: User mentions
 
   Scenario: Comment has multiple @mentions
     Given I write a comment with body "Hello @jade and @sam, how is it going?"
-    Then the comment's mentions should include the users "jade" and "sam"
+    Then the comment's mentions should include the users "jade, sam"
